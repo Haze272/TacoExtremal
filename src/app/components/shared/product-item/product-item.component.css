@@ -1,0 +1,46 @@
+.product {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 200px;
+    gap: 10px;
+
+}
+
+.product > span {
+    text-align: center;
+}
+
+.price-weight {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 2px;
+}
+
+span.name {
+    font-size: 24px;
+}
+
+span.price {
+    font-size: 20px;
+}
+
+span.weight {
+    font-size: 14px;
+    color: #353535;
+}
+
+.description {
+    text-align: center;
+}
+
+.cart-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.cart-actions > input {
+    width: 60px;
+}

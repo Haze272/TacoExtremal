@@ -1,0 +1,21 @@
+header {
+    width: 100%;
+    height: 70px;
+    background-color: #461759;
+}
+
+.header__container {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.header__navigation {
+    display: flex;
+    flex-direction: row;
+}
+
+.telWrapper {
+    justify-self: end;
+}
