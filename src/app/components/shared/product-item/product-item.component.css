@@ -1,10 +1,12 @@
 .product {
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
-    width: 200px;
+    border: 1px solid rgb(177, 177, 177);
+    width: 220px;
     gap: 10px;
-
+    padding: 10px;
+    box-shadow: 1px 3px 10px rgb(197, 197, 197);
+    justify-items: center;
 }
 
 .product > span {
@@ -15,11 +17,12 @@
     display: flex;
     flex-direction: row;
     align-items: end;
-    gap: 2px;
+    gap: 5px;
 }
 
 span.name {
     font-size: 24px;
+    color: #353535;
 }
 
 span.price {
@@ -33,14 +36,56 @@ span.weight {
 
 .description {
     text-align: center;
+    font-size: 14px;
+    color: #797979;
 }
 
 .cart-actions {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    height: 36px;
+    gap: 3px;
+}
+
+.cart-actions > button {
+    width: 36px;
+    background-color: #a93cd4;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    color: white;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.cart-actions > button:hover {
+    background-color: rgb(255, 186, 38);
 }
 
 .cart-actions > input {
     width: 60px;
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.add-to-cart {
+    display: flex;
+    justify-content: center;
+}
+
+.add-to-cart > a {
+    width: 100%;
+    background-color: #a93cd4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: all .2s ease-in-out;
+    height: 40px;
+    text-align: center;
+}
+
+.add-to-cart > a:hover {
+    background-color: rgb(255, 186, 38);
 }
