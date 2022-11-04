@@ -1,12 +1,12 @@
 <div class="product">
-    <img src="https://i.imgur.com/gsyYw6n.jpeg" alt="">
-    <span class="name">Кесадилья</span>
+    <img [src]="inputProduct.imgUrl" alt="">
+    <span class="name">{{ inputProduct.name }}</span>
     <div class="price-weight">
-        <span class="price">450 р.</span>
-        <span class="weight">360 г.</span>
+        <span class="price">{{ inputProduct.price }} р.</span>
+        <span class="weight">{{ inputProduct.weight }} г.</span>
     </div>
     <div class="description">
-        Нежная кесадилья с перцом халапеньо в хрустящей тапе
+        {{ inputProduct.description }}
     </div>
     <div class="cart-actions">
         <button>+</button>

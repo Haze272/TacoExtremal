@@ -7,6 +7,7 @@
     padding: 10px;
     box-shadow: 1px 3px 10px rgb(197, 197, 197);
     justify-items: center;
+    height: 460px;
 }
 
 .product > span {

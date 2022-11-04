@@ -27,6 +27,10 @@ export class ProductService {
         return this.products;
     }
 
+    constructor() {
+        this.makeMockProducts();
+    }
+
     public makeMockProducts() {
         this.products = [
             {
