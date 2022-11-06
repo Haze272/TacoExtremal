@@ -8,6 +8,7 @@ export class ProductService {
     public getProducts(): Product[] {
         //this.makeMockProducts();
         this.getProductsFromServer();
+        console.log(this.products);
         return this.products;
     }
 
@@ -17,7 +18,9 @@ export class ProductService {
 
     public getProductsFromServer() {
         this.httpClient.get('https://pet-esteban.ru/ited-api/marketplace/users/esteban/data')
-        .subscribe((data: any) => (this.products = data));
+        .subscribe((res) => {
+            this.products = res as Product[];
+        });
     }
 
     public makeMockProducts() {
