@@ -1,34 +1,23 @@
-export class Product {
-    name: string;
-    description: string;
-    price: number;
-    weight: number;
-    imgUrl: string;
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from "@angular/core";
 
-    constructor(
-        _name: string,
-        _description: string,
-        _price: number,
-        _weight: number,
-        _imgUrl: string
-    ) {
-        this.name = _name;
-        this.description = _description;
-        this.price = _price;
-        this.weight = _weight;
-        this.imgUrl = _imgUrl;
-    }
-}
-
+@Injectable()
 export class ProductService {
     private products: Product[] = [];
 
     public getProducts(): Product[] {
+        //this.makeMockProducts();
+        this.getProductsFromServer();
         return this.products;
     }
 
-    constructor() {
-        this.makeMockProducts();
+    constructor(private httpClient: HttpClient) {
+        
+    }
+
+    public getProductsFromServer() {
+        this.httpClient.get('https://pet-esteban.ru/ited-api/marketplace/users/esteban/data')
+        .subscribe((data: any) => (this.products = data));
     }
 
     public makeMockProducts() {
@@ -97,6 +86,29 @@ export class ProductService {
                 'imgUrl': 'https://i.imgur.com/vHOIMc2.jpg'
             },
         ]
+    }
+}
+
+
+export class Product {
+    name: string;
+    description: string;
+    price: number;
+    weight: number;
+    imgUrl: string;
+
+    constructor(
+        _name: string,
+        _description: string,
+        _price: number,
+        _weight: number,
+        _imgUrl: string
+    ) {
+        this.name = _name;
+        this.description = _description;
+        this.price = _price;
+        this.weight = _weight;
+        this.imgUrl = _imgUrl;
     }
 }
 
