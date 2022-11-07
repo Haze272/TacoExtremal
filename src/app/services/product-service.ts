@@ -17,10 +17,10 @@ export class ProductService {
     }
 
     public getProductsFromServer() {
+        console.log('antihype');
         this.httpClient.get('https://pet-esteban.ru/ited-api/marketplace/users/esteban/data')
-        .subscribe((res) => {
-            this.products = res as Product[];
-        });
+        .subscribe((res) => this.products = res as Product[]);
+        console.log('antihype');
     }
 
     public makeMockProducts() {
