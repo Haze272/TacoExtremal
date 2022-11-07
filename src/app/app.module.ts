@@ -19,7 +19,7 @@ import { ProductService } from './services/product-service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
