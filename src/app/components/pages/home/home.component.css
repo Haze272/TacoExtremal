@@ -1,3 +1,64 @@
+img.bg-item {
+  position: fixed;
+  animation: diving 3s ease-in-out infinite, diving-rotate 3s ease-in-out infinite;
+  width: 100px;
+  opacity: .2;
+  z-index: -1;
+}
+
+.taco {
+  top: 140px;
+  left: 20px;
+}
+
+.hombre {
+  top: 280px;
+  right: 20px;
+}
+
+.burrito {
+  bottom: 28px;
+  left: 57px;
+}
+
+.nachos {
+  bottom: 68px;
+  right: 10vw;
+}
+
+.mescalina {
+  top: 50vh;
+  left: 11vw;
+}
+
+@keyframes diving {
+  0% {
+    margin-top:5px;
+  }
+  50% {
+    margin-top:15px;
+  }
+
+  100% {
+    margin-top:5px;
+  }
+}
+
+@keyframes diving-rotate {
+  0% {
+    transform:rotate(0deg);
+  }
+  50% {
+    transform:rotate(3deg);
+  }
+  75% {
+    transform:rotate(-2deg);
+  }
+  100% {
+    transform:rotate(0deg);
+  }
+}
+
 section {
     padding: 0 10px;
 }
@@ -8,7 +69,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px;
+    gap: 10px;
 }
 
 @media screen and (max-width: 500px)  {

@@ -1,13 +1,15 @@
 .product {
     display: flex;
     flex-direction: column;
-    border: 1px solid rgb(177, 177, 177);
-    width: 220px;
+    /* border: 1px solid rgb(177, 177, 177); */
+    width: 240px;
     gap: 10px;
     padding: 10px;
     box-shadow: 1px 3px 10px rgb(197, 197, 197);
     justify-items: center;
     height: 460px;
+    border-radius: 10px;
+    background-color: #fff;
 }
 
 .product > span {
@@ -39,6 +41,7 @@ span.weight {
     text-align: center;
     font-size: 14px;
     color: #797979;
+    flex: 1 1 auto;
 }
 
 .cart-actions {

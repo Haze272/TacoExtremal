@@ -26,8 +26,39 @@ a:hover {
     display: flex;
     align-items: center;
     gap: 5px;
+    /*
+    animation: diving 3s ease-in-out infinite, diving-rotate 3s ease-in-out infinite;
+     */
+}
+/*
+@keyframes diving {
+  0% {
+    margin-top:5px;
+  }
+  50% {
+    margin-top:15px;
+  }
+
+  100% {
+    margin-top:5px;
+  }
 }
 
+@keyframes diving-rotate {
+  0% {
+    transform:rotate(0deg);
+  }
+  50% {
+    transform:rotate(3deg);
+  }
+  75% {
+    transform:rotate(-2deg);
+  }
+  100% {
+    transform:rotate(0deg);
+  }
+}
+*/
 .logoWrapper img {
     width: 60px;
     height: 60px;
