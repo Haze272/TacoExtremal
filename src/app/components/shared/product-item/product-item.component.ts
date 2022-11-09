@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CartService } from 'src/app/services/cart-service';
 import { Product } from 'src/app/services/product-service';
 
 @Component({
@@ -8,10 +9,24 @@ import { Product } from 'src/app/services/product-service';
 })
 export class ProductItemComponent implements OnInit {
   @Input() inputProduct!: Product;
+  quantity: number = 1;
 
-  constructor() { }
+  constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
   }
 
+  increaseQuantity() {
+    this.quantity++;
+  }
+
+  decreaseQuantity() {
+    if (this.quantity > 1) {
+      this.quantity--;
+    }
+  }
+
+  addToCart() {
+    this.cartService.addToCart(this.inputProduct);
+  }
 }

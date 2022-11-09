@@ -9,11 +9,11 @@
         {{ inputProduct.description }}
     </div>
     <div class="cart-actions">
-        <button>+</button>
-        <input type="number">
-        <button>-</button>
+        <button (click)="increaseQuantity()">+</button>
+        <input type="number" [value]="quantity">
+        <button (click)="decreaseQuantity()">-</button>
     </div>
     <div class="add-to-cart">
-        <a href="#">Добавить в корзину</a>
+        <a href="#" (click)="addToCart()">Добавить в корзину</a>
     </div>
 </div>

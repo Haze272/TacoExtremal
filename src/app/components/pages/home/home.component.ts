@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { Product, ProductService } from 'src/app/services/product-service';
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-home',
@@ -7,16 +8,16 @@ import { Product, ProductService } from 'src/app/services/product-service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  products: Product[] = [];
+  products$!: Observable<Product[]>;
   taco: string = 'assets/img/taco.png';
   hombre: string = 'assets/img/hombre.png';
   burrito: string = 'assets/img/burrito.png';
   nachos: string = 'assets/img/nachos.png';
-  mescalina: string = 'assets/img/mescalina.png';;
+  mescalina: string = 'assets/img/mescalina.png';
 
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
-    this.productService.getProducts().subscribe((res: any) => this.products = res);
+    this.products$ = this.productService.getProducts();
   }
 }

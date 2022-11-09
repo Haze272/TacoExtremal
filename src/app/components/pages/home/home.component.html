@@ -8,7 +8,7 @@
         <h2>Товары:</h2>
     </div>
     <div class="products-container">
-        <app-product-item *ngFor="let product of products" [inputProduct]="product"></app-product-item>
+        <app-product-item *ngFor="let product of products$ | async as list" [inputProduct]="product"></app-product-item>
     </div>
     <img src="blob:https://imgur.com/af770be1-3fd1-4457-9ad9-0224f3478bef" alt="">
 </section>

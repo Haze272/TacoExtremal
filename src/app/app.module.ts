@@ -8,20 +8,23 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { ProductItemComponent } from './components/shared/product-item/product-item.component';
 import { ProductService } from './services/product-service';
+import { CartComponent } from './components/pages/cart/cart.component';
+import { CartService } from './services/cart-service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    ProductItemComponent
+    ProductItemComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [ProductService],
+  providers: [ProductService, CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
